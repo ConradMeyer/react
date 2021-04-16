@@ -1,15 +1,15 @@
 import './App.css';
 import Header from './components/header/header';
+import Footer from './components/footer/footer';
+import Main from './components/main/main';
 
 function App() {
+  
   return (
     <div className="App">
-      <Header order={{ id:1, name: "Primero"}}/>
-      <Header order="2"/>
-      <main>
-          <h1>Hola Mundo</h1>
-      </main>
-      <footer>FOOTER</footer>
+      <Header />
+      <Main />
+      <Footer />
     </div>
   )
 }
