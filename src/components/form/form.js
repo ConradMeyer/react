@@ -20,7 +20,7 @@ class Form extends React.Component {
         return (
             <form className="input">
                 <input type="text" name="task" placeholder="Escribe aqui tu nueva tarea" id="input" onChange={this.handleTask} />
-                <button onClick={this.handleNewTask}>Nueva tarea</button>
+                <button onClick={this.handleNewTask}>New Task</button>
             </form>
         )
     } 

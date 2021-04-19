@@ -41,6 +41,12 @@ class Main extends React.Component {
         })
     }
 
+    // editTask = (i, input) => {
+    //     this.setState({
+    //         tasks: tasks[i] = input
+    //     })
+    // }
+
     deleteTask = (i) => {
         let tasks = this.state.tasks.filter((el, index) => index !== i)
         this.setState({

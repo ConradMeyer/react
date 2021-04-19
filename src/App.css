@@ -27,8 +27,8 @@ form.input {
     padding: 10px;
     box-shadow: 2px 2px 20px -4px black;
   }
-  button {
-    width: 120px;
+  .input button {
+    width: 100px;
     margin: 15px;
     padding: 10px 15px;
     text-decoration: none;
@@ -43,6 +43,25 @@ form.input {
       cursor: pointer;
       transform: scale(1.05);
     }
+
+button {
+  width: 100px;
+  margin: 15px;
+  padding: 7px 15px;
+  text-decoration: none;
+  border-radius: 10px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  box-shadow: 2px 2px 20px -4px black;
+}
+
+/* article {
+  display: flex;
+  justify-content:space-evenly;
+} */
+
 h2.tareas{
   text-decoration: underline;
 }

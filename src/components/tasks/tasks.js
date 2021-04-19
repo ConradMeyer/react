@@ -12,7 +12,11 @@ class Task extends React.Component {
   render() {
     return (
       <article>
-        <h3 onClick={() => this.props.delete(this.props.index)}>{this.props.task}</h3>
+          <h3>{this.props.task}</h3>
+        <div className="botones">
+          <button onClick={() => this.props.edit(this.props.index)}>Edit</button>
+          <button onClick={() => this.props.delete(this.props.index)}>Delete</button>
+        </div>
       </article>
     )
   }
