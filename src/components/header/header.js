@@ -11,7 +11,7 @@ class Header extends React.Component {
         return (
             <header className="header">
                 <h1>
-                    Hola Mundo React
+                    Mundo React
                 </h1>
             </header>
         )

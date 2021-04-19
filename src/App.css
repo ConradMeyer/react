@@ -3,8 +3,8 @@ body {
   text-align: center;
 }
 
-.footer {
-  margin: 50px auto;
+h1 {
+  text-decoration: underline;
 }
 
 form.input {
@@ -20,7 +20,7 @@ form.input {
 }
   input {
     margin: 15px;
-    width: 200px;
+    width: 60%;
     text-align: center;
     border-radius: 10px;
     border: none;
@@ -28,6 +28,7 @@ form.input {
     box-shadow: 2px 2px 20px -4px black;
   }
   button {
+    width: 120px;
     margin: 15px;
     padding: 10px 15px;
     text-decoration: none;
@@ -42,6 +43,14 @@ form.input {
       cursor: pointer;
       transform: scale(1.05);
     }
-h2 {
+h2.tareas{
   text-decoration: underline;
+}
+
+h3:hover {
+  cursor: pointer;
+}
+
+.footer {
+  margin: 50px auto;
 }
