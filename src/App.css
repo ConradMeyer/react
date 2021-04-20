@@ -1,6 +1,8 @@
 body {
-  background-color: wheat;
+  background-color: darkgrey;
   text-align: center;
+  /* background-image: url(https://thumbs.dreamstime.com/b/papel-amarillo-de-la-libreta-con-las-l%C3%ADneas-y-el-fondo-rojo-del-margen-61116275.jpg);
+  background-size: cover; */
 }
 
 h1 {
@@ -11,6 +13,7 @@ form.input {
   margin: 10px auto;
   border-radius: 10px;
   width: 80%;
+  max-width: 600px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -28,7 +31,7 @@ form.input {
     box-shadow: 2px 2px 20px -4px black;
   }
   .input button {
-    width: 100px;
+    width: 80px;
     margin: 15px;
     padding: 10px 15px;
     text-decoration: none;
@@ -44,8 +47,8 @@ form.input {
       transform: scale(1.05);
     }
 
-button {
-  width: 100px;
+article button {
+  width: 80px;
   margin: 15px;
   padding: 7px 15px;
   text-decoration: none;
@@ -62,7 +65,8 @@ article {
   justify-content:space-evenly;
   align-items: center;
   background-color: whitesmoke;
-  margin: 10px;
+  margin: 10px auto;
+  max-width: 650px;
 }
   article>h3 {
     width: 30%;
@@ -78,6 +82,10 @@ article {
     height: 12px;
     box-shadow: 2px 2px 20px -4px black;
   }
+  article>select {
+    height: 25px;
+    margin-right: 10px
+  }
   article #check {
     width: 5%;
     box-shadow: none;
@@ -89,15 +97,9 @@ article {
     article button {
       margin: 5px;
     }
-  
-    /* article.false {
-      background-color: red;
-    } */
     article.true {
       background-color: green;
     }
-
-
 
 h2.tareas{
   text-decoration: underline;
@@ -107,6 +109,14 @@ h3:hover {
   cursor: pointer;
 }
 
-.footer {
-  margin: 50px auto;
+button {
+  margin: 15px;
+  padding: 7px 15px;
+  text-decoration: none;
+  border-radius: 10px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  box-shadow: 2px 2px 20px -4px black;
 }

@@ -35,6 +35,10 @@ class Task extends React.Component {
           <button onClick={this.editTask}>Edit</button>
           <button onClick={this.delete}>Delete</button>
         </div>
+        <select name="prioridad" id="prioridad">
+          <option value="Baja">Baja</option>
+          <option value="Alta">Alta</option>
+        </select>
       </article>
     )
   }

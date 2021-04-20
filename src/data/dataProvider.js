@@ -4,7 +4,7 @@ function getTasks() {
         ok: false
     },
     {
-        task: "Recoger la mochila",
+        task: "Mochila",
         ok: false
     }]
   }
