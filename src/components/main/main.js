@@ -11,8 +11,7 @@ class Main extends React.Component {
     
         this.state = {
           tasks: [],
-          user: this.props.user || "Conrad",
-          limit: 10
+          user: this.props.user || "Conrad"
         }
     }
 
@@ -29,7 +28,7 @@ class Main extends React.Component {
     drawTasks = () => {
         if (this.state.tasks.length > 0) {
           return this.state.tasks.map((item, index) =>
-            <Task task={item.task} index={index} delete={this.deleteTask} />
+            <Task task={item.task} index={index} ok={item.ok} delete={this.deleteTask} editTask={this.editTask} checkTask={this.checkTask} />
           )
         }
         return <h3>No hay tareas pendientes</h3>
@@ -41,11 +40,11 @@ class Main extends React.Component {
         })
     }
 
-    // editTask = (i, input) => {
-    //     this.setState({
-    //         tasks: tasks[i] = input
-    //     })
-    // }
+    editTask = (i, input) => {
+        const editTask = [...this.state.tasks]
+        editTask[i].task = input
+        this.setState({ tasks: editTask })
+    }
 
     deleteTask = (i) => {
         let tasks = this.state.tasks.filter((el, index) => index !== i)
@@ -54,12 +53,23 @@ class Main extends React.Component {
         })
     }
 
+    checkTask = (i) => {
+        const checkTask = [...this.state.tasks]
+        checkTask[i].ok = !checkTask[i].ok
+        this.setState({ tasks: checkTask })
+    }
+
+    searchTask = (text) => {
+        const search = this.state.tasks.filter(el => el.task.includes(text))
+        this.setState({tasks: search})
+    }
+
     render() {
         return (
             <main className="main">
-                <h2>Bienvenido, {this.state.user ? this.state.user : "Anónimo"}</h2>
-                <Form addTask={this.addTask}/>
-                <h2 className="tareas">LISTA DE TAREAS</h2>
+                <h2>Lista de tareas de {this.state.user ? this.state.user : "Anónimo"}</h2>
+                <Form addTask={this.addTask} searchTask={this.searchTask}/>
+                <h2 className="tareas">TAREAS:</h2>
                 {this.drawTasks()}
             </main>
         )

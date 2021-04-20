@@ -5,7 +5,10 @@ class Form extends React.Component {
         super(props);
 
         this.state = {
-            task: ""
+            task: {
+               task: this.props.task,
+               ok: this.props.ok 
+            }
         }
     }
 
@@ -16,11 +19,17 @@ class Form extends React.Component {
         this.props.addTask(this.state.task)
     }
 
+    search = (event) => {
+        event.preventDefault()
+        this.props.searchTask(this.state.task)
+    }
+
     render() {
         return (
             <form className="input">
                 <input type="text" name="task" placeholder="Escribe aqui tu nueva tarea" id="input" onChange={this.handleTask} />
-                <button onClick={this.handleNewTask}>New Task</button>
+                <button onClick={this.handleNewTask}>New</button>
+                <button onClick={this.search}>Search</button>
             </form>
         )
     } 

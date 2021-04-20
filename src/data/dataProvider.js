@@ -1,9 +1,11 @@
 function getTasks() {
     return [{
-        task: "Aprender react"
+        task: "Aprender react",
+        ok: false
     },
     {
-        task: "Recoger la mochila"
+        task: "Recoger la mochila",
+        ok: false
     }]
   }
   
