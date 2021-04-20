@@ -6,8 +6,8 @@ class Form extends React.Component {
 
         this.state = {
             task: {
-               task: this.props.task,
-               ok: this.props.ok 
+               task: props.task,
+               ok: props.ok 
             }
         }
     }
@@ -20,7 +20,6 @@ class Form extends React.Component {
         event.preventDefault()
         this.props.addTask(this.state.task)
     }
-
 
     render() {
         return (

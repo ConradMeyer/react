@@ -6,8 +6,8 @@ class Search extends React.Component {
 
         this.state = {
             task: {
-               task: this.props.task,
-               ok: this.props.ok 
+               task: props.task,
+               ok: props.ok 
             }
         }
     }
